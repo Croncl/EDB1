@@ -1,6 +1,8 @@
 #include <iostream>
+#include <chrono>
 
 using namespace std;
+using namespace std::chrono;
 
 int fibonacci_recursivo(int n){
     if (n <= 1) {
@@ -29,15 +31,24 @@ int fibonacci_iterativo(int n){
 }
 
 
-int main(){
-        
-    int n;
-    cout << "Digite o valor de N: ";
-    cin >> n;
-    cout << "O valor de X na posição N da sequência de fibonacci_iterativo é: " << fibonacci_iterativo(n) << endl;
-    cout << "O valor de X na posição N da sequência de fibonacci_recurssivo é: " << fibonacci_recursivo(n) << endl;
-    
+int main() {
+    // Testar os algoritmos Fibonacci para diferentes valores de n
+    for (int n = 0; n <= 30; n++) {
+        auto start_iterativo = high_resolution_clock::now();
+        int fib_iterativo = fibonacci_iterativo(n);
+        auto stop_iterativo = high_resolution_clock::now();
+        auto duration_iterativo = duration_cast<microseconds>(stop_iterativo - start_iterativo);
 
+        auto start_recursivo = high_resolution_clock::now();
+        int fib_recursivo = fibonacci_recursivo(n);
+        auto stop_recursivo = high_resolution_clock::now();
+        auto duration_recursivo = duration_cast<microseconds>(stop_recursivo - start_recursivo);
+
+        cout << "n = " << n << endl;
+        cout << "Fibonacci Iterativo: " << fib_iterativo << " Tempo: " << duration_iterativo.count() << " microssegundos" << endl;
+        cout << "Fibonacci Recursivo: " << fib_recursivo << " Tempo: " << duration_recursivo.count() << " microssegundos" << endl;
+        cout << endl;
+    }
 
     return 0;
 }
