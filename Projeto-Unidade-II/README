@@ -1,0 +1,42 @@
+# Verificador de Balanceamento de Expressões
+
+Este projeto implementa um verificador de balanceamento de expressões usando uma estrutura de dados de pilha. Ele verifica se os delimitadores de abertura e fechamento em uma expressão estão corretamente balanceados.
+
+## Estrutura do Projeto
+
+O projeto é composto pelos seguintes arquivos:
+
+- `main.cpp`: Contém a função principal que solicita ao usuário uma expressão e verifica se ela está balanceada.
+- `Stack.hpp`: Define a estrutura de dados da pilha e declara as funções utilizadas para verificar o balanceamento.
+- `Stack.cpp`: Implementa os métodos da classe `Stack` e as funções auxiliares para verificar o balanceamento.
+
+
+## Estrutura de Dados Utilizada
+Classe Stack
+A classe Stack é usada para implementar a pilha. Ela possui os seguintes métodos:
+
+push(char ch): Empilha um caractere.
+pop(): Desempilha um caractere.
+peek(): Retorna o caractere do topo sem removê-lo.
+isEmpty(): Verifica se a pilha está vazia.
+Funções Auxiliares
+bool isMatchingPair(char abre, char fecha): Verifica se os caracteres de abertura e fechamento formam um par correspondente.
+bool isBalanced(const std::string& expressao): Verifica se a expressão está balanceada.
+
+## Como Compilar e Executar
+
+### Pré-requisitos
+
+- Um compilador C++ (por exemplo, g++ do MinGW no Windows)
+- Terminal ou prompt de comando
+
+### Passos para Compilar
+
+1. Abra o terminal integrado no Visual Studio Code ou o prompt de comando.
+2. Navegue até o diretório onde os arquivos do projeto estão localizados.
+3. Compile os arquivos usando o seguinte comando:
+
+g++ -o main main.cpp Stack.cpp
+
+### Passos para Executar
+.\main
