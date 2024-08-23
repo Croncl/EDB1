@@ -1,49 +1,29 @@
-# Sistema de Contagem de Palavras
+# Projeto de Tabela Hash em C++
 
-Este projeto é um sistema para contar e gerenciar palavras em um texto usando uma tabela hash com listas ligadas para lidar com colisões. O programa permite adicionar texto/palavras, contar ocorrências de cada palavra, atualizar contagens, remover palavras, verificar a presença de palavras.
+Este projeto implementa uma tabela hash simples em C++ para armazenar e contar palavras.
 
-## Funcionalidades
+## Descrição
 
-- **Adicionar Texto**: Adiciona uma palavra à tabela hash e inicializa ou incrementa sua contagem.
-- **Contar Palavra**: Conta o número de ocorrências de uma palavra específica na tabela.
-- **Atualizar Contagem**: Atualiza a contagem de uma palavra existente.
-- **Remover Palavra**: Remove uma palavra da tabela hash.
-- **Verificar Palavra**: Verifica se uma palavra está presente na tabela.
-- **Imprimir Tabela**: Imprime o conteúdo da tabela hash.
+O projeto consiste em uma implementação de uma tabela hash que permite adicionar palavras, contar a ocorrência de palavras, verificar se uma palavra está presente e remover palavras. A tabela hash é implementada usando vetores e listas encadeadas.
 
+## Instalação
 
-## Compilação e Execução
+Para configurar e executar o projeto no Repl.it, siga os passos abaixo:
 
-1. **Compilação**
-
-   Para compilar o código, use um compilador C++ que suporte o padrão C++11 ou superior. O seguinte comando usa o `g++` para compilar:
-
-   ```sh
-   g++ -std=c++11 -o sistema_contagem_palavras main.cpp
-   ```
-
-2. **Execução**
-
-   Para executar o programa compilado, use o comando:
-
-   ```sh
-   ./sistema_contagem_palavras
-   ```
-
-   O programa exibirá um menu com várias opções para interagir com a tabela hash.
+1. Acesse [Repl.it](https://repl.it/).
+2. Crie uma nova repl e selecione a linguagem C++.
+3. Copie os arquivos `main.cpp`, `hashTable.h` e `hashTable.cpp` para o Repl.it.
+4. Certifique-se de que o arquivo `main.cpp` é o arquivo principal.
 
 ## Uso
 
-Ao iniciar o programa, você verá um menu com as seguintes opções:
+Aqui está um exemplo de como usar o programa:
 
-1. **Adicionar Texto**: Insira a palavra a ser adicionada à tabela.
-2. **Contar Palavra**: Insira a palavra para contar suas ocorrências.
-3. **Atualizar Contagem**: Insira a palavra e a nova contagem para atualizar.
-4. **Remover Palavra**: Insira a palavra a ser removida da tabela.
-5. **Verificar Palavra**: Insira a palavra para verificar se está presente na tabela.
-6. **Imprimir Tabela**: Exibe o conteúdo atual da tabela hash.
-0. **Sair**: Encerra o programa.
+1. Clique no botão "Run" no Repl.it.
+2. O programa irá adicionar várias palavras à tabela hash, contar a ocorrência de algumas palavras, verificar a presença de outras e remover uma palavra. Em seguida, ele imprimirá o conteúdo da tabela hash.
 
+## Estrutura do Projeto
 
-teste:
-apple orange banana grape cherry peach mango apricot plum date
+- `main.cpp`: Contém a função `main` que demonstra o uso da tabela hash.
+- `hashTable.h`: Declaração da classe `HashTable` e da estrutura `Palavra`.
+- `hashTable.cpp`: Implementação dos métodos da classe `HashTable`.
